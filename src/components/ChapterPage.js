@@ -1,18 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import Chapter from './Chapter';
-import demonicEmperorJson from '../assets/demonicEmperor.json';
-import { useLocation } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
+import Chapter from './Chapter';
 
-const ChapterPage = () => {
+const ChapterPage = ({ mangaData }) => {
   const { chapterNumber } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
-  const demonicEmperor = JSON.parse(JSON.stringify(demonicEmperorJson))[0];
   const [nextBtn, setNextBtn] = useState(true);
   const [prevBtn, setPrevBtn] = useState(true);
+
 
   const handleChange = (e) => {
     navigate(`/${e.target.value}`);
@@ -22,7 +20,7 @@ const ChapterPage = () => {
   };
 
   const isNextChap = () => {
-    if (Number(chapterNumber) >= demonicEmperor.numberOfChapters[0]) {
+    if (Number(chapterNumber) >= mangaData.numberOfChapters.at(-1)) {
       setNextBtn(false);
     } else {
       setNextBtn(true);
@@ -59,7 +57,7 @@ const ChapterPage = () => {
             defaultValue={chapterNumber}
             onChange={handleChange}
           >
-            {demonicEmperor.numberOfChapters.reverse().map((num, i) => (
+            {[...mangaData.numberOfChapters].reverse().map((num, i) => (
               <option key={i} value={num}>
                 الفصل رقم : {num}
               </option>
@@ -82,7 +80,7 @@ const ChapterPage = () => {
           </button>
         </div>
         <div className="chapter-container w-full flex flex-col items-center min-h-screen">
-          <Chapter chapterNumber={chapterNumber} />
+          <Chapter mangaData={mangaData} chapterNumber={chapterNumber} />
         </div>
         <div className="btn-container flex flex-row justify-between">
           <button

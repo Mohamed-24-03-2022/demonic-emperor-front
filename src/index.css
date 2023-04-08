@@ -22,6 +22,7 @@ body {
   background-blend-mode: screen;
   font-family: 'Noto Kufi Arabic', sans-serif;
   user-select: none;
+  color: #333;
 }
 
 nav {
@@ -106,6 +107,7 @@ nav .heading {
 footer {
   box-shadow: rgba(44, 0, 75, 0.225) 0px 0px 50px 0px;
 }
+
 /*__________________________ select box styling _______________________________ */
 div.select-container {
   border: 1px solid #7777776a;

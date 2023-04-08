@@ -2,7 +2,11 @@ import React from 'react'
 
 const NotFoundRoute = () => {
   return (
-    <div>NotFoundRoute</div>
+    <div className='w-full h-screen flex justify-center items-start p-28 text-9xl'>
+      <h1>
+        Not Found 404
+      </h1>
+    </div>
   )
 }
 
