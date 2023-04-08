@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/demonic-emperor-project/static/css/main.6643ce4d.css",
+    "main.js": "/demonic-emperor-project/static/js/main.273d6e4e.js",
+    "static/media/background-img.jpg": "/demonic-emperor-project/static/media/background-img.7d176149772a7b5f7529.jpg",
+    "static/media/manga-img.jpg": "/demonic-emperor-project/static/media/manga-img.3ddcf4624af85c0b09fa.jpg",
+    "index.html": "/demonic-emperor-project/index.html",
+    "main.6643ce4d.css.map": "/demonic-emperor-project/static/css/main.6643ce4d.css.map",
+    "main.273d6e4e.js.map": "/demonic-emperor-project/static/js/main.273d6e4e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6643ce4d.css",
+    "static/js/main.273d6e4e.js"
+  ]
+}
