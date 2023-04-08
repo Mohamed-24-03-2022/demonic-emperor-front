@@ -1,13 +1,68 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  user-select: none;
+}
+nav {
+  background-image: url('./assets/background-img.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 10%;
+  /* background-position: top; */
+  background-color: transparent;
+  background-size: cover;
+  height: 500px;
+  /* background-size: 80%; */
+  /* background-size: contain; */
+}
+nav .heading {
+  box-shadow: rgba(4, 4, 4, 0.734) 10px 50px 500px 100px;
+  background-color: rgba(4, 4, 4, 0.462);
+}
+.menu li {
+  padding: 10px;
+  list-style: none;
+  transition: all 50ms;
+}
+.menu li:hover {
+  color: #be2328;
+  border-bottom: 2px solid #be2328;
+  background-color: #33333305;
+  box-shadow: rgba(4, 4, 4, 0.038) 0px 15px 10px 5px;
+}
+.menu a {
+  text-decoration: none;
+  color: inherit;
+}
+.card{
+  box-shadow: rgba(62, 0, 81, 0.221) 0px 0px 40px 5px;
+}
+.scrollable{
+  height: 400px;
+  width: 300px;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: #eeeeeeb1;
+  box-shadow: rgba(30, 0, 40, 0.132) 0px 0px 10px 1px;
+
+}
+.chapters-section a {
+  border: solid 1px #3333335e;
+  min-width: 155px;
+  padding: 5px;
+  border-radius: 10px;
+  display: inline-block;
+}
+.chapters-section a:hover {
+  transform: scale(1.05);
+  transition: all 250ms;
+  box-shadow: rgba(4, 4, 4, 0.038) 0px 15px 10px 5px;
+}
+.newP {
+  color: #be2328;
+  text-shadow: 0px 3px 15px #ff2e35;
+}
+.newP:hover {
+  color: #ff2e35;
 }
