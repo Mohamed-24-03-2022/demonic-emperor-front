@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/demonic-emperor-project/static/css/main.86d38c61.css",
-    "main.js": "/demonic-emperor-project/static/js/main.deea6fd1.js",
+    "main.js": "/demonic-emperor-project/static/js/main.7a0aaab1.js",
     "static/media/background-img.jpg": "/demonic-emperor-project/static/media/background-img.7d176149772a7b5f7529.jpg",
     "static/media/manga-img.jpg": "/demonic-emperor-project/static/media/manga-img.3ddcf4624af85c0b09fa.jpg",
     "index.html": "/demonic-emperor-project/index.html",
     "main.86d38c61.css.map": "/demonic-emperor-project/static/css/main.86d38c61.css.map",
-    "main.deea6fd1.js.map": "/demonic-emperor-project/static/js/main.deea6fd1.js.map"
+    "main.7a0aaab1.js.map": "/demonic-emperor-project/static/js/main.7a0aaab1.js.map"
   },
   "entrypoints": [
     "static/css/main.86d38c61.css",
-    "static/js/main.deea6fd1.js"
+    "static/js/main.7a0aaab1.js"
   ]
 }
