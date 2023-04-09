@@ -6,8 +6,7 @@ import DisableDevtool from 'disable-devtool';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-// window.addEventListener('contextmenu', (e) => e.preventDefault());
-// DisableDevtool();
+DisableDevtool();
 
 root.render(
   <React.StrictMode>

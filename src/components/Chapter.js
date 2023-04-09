@@ -4,7 +4,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 const Chapter = ({ mangaData, chapterNumber }) => {
   const location = useLocation();
 
-  if (location.pathname === '/') {
+  if (location.pathname === '/demonic-emperor-project') {
     return <Navigate to="/" />;
   }
   if (
