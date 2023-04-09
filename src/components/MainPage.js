@@ -22,7 +22,6 @@ const MainPage = ({ mangaData }) => {
               <p>صنف : أكشن, إثارة, فنون, قتال, زمكاني </p>
             </div>
           </div>
-
         </div>
 
         <div className="chapters-section flex flex-col items-end ">

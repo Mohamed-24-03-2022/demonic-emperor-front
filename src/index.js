@@ -6,7 +6,7 @@ import DisableDevtool from 'disable-devtool';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-DisableDevtool();
+// DisableDevtool();
 
 root.render(
   <React.StrictMode>
