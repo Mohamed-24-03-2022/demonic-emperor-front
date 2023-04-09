@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/demonic-emperor-project/static/css/main.80d8515f.css",
-    "main.js": "/demonic-emperor-project/static/js/main.344836ae.js",
-    "static/media/background-img.jpg": "/demonic-emperor-project/static/media/background-img.7d176149772a7b5f7529.jpg",
-    "static/media/manga-img.jpg": "/demonic-emperor-project/static/media/manga-img.3ddcf4624af85c0b09fa.jpg",
-    "static/media/loading.png": "/demonic-emperor-project/static/media/loading.87297c84473597344a71.png",
-    "index.html": "/demonic-emperor-project/index.html",
-    "main.80d8515f.css.map": "/demonic-emperor-project/static/css/main.80d8515f.css.map",
-    "main.344836ae.js.map": "/demonic-emperor-project/static/js/main.344836ae.js.map"
+    "main.css": "/demonic-emperor-front/static/css/main.51936bfd.css",
+    "main.js": "/demonic-emperor-front/static/js/main.21837c51.js",
+    "static/media/background-img.jpg": "/demonic-emperor-front/static/media/background-img.7d176149772a7b5f7529.jpg",
+    "static/media/manga-img.jpg": "/demonic-emperor-front/static/media/manga-img.3ddcf4624af85c0b09fa.jpg",
+    "static/media/loading.png": "/demonic-emperor-front/static/media/loading.87297c84473597344a71.png",
+    "index.html": "/demonic-emperor-front/index.html",
+    "main.51936bfd.css.map": "/demonic-emperor-front/static/css/main.51936bfd.css.map",
+    "main.21837c51.js.map": "/demonic-emperor-front/static/js/main.21837c51.js.map"
   },
   "entrypoints": [
-    "static/css/main.80d8515f.css",
-    "static/js/main.344836ae.js"
+    "static/css/main.51936bfd.css",
+    "static/js/main.21837c51.js"
   ]
 }
