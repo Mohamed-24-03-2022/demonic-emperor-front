@@ -6,7 +6,7 @@ const MainPage = ({ mangaData }) => {
 
   return (
     <div className="w-full flex flex-col items-center py-10 px-10 space-x-8 text-right">
-      <div className="card p-10 w-fit space-y-10 lg:w-3/4 xl:w-7/12 2xl:w-3/6 md:p-10">
+      <div className="card p-6 w-fit space-y-10 sm:p-10 lg:w-3/4 xl:w-7/12 2xl:w-3/6 md:p-10">
 
         <div className="manga-description flex flex-row flex-wrap space-x-8 space-y-8 md:flex-nowrap md:space-y-0 md:items-center md:text-lg">
 
@@ -15,7 +15,7 @@ const MainPage = ({ mangaData }) => {
           </div>
           <div style={{ minHeight: '465px' }} className="description w-fit hue-rotate-30 ">
             <h3 className='text-2xl font-bold pb-4'> : الامبراطور الشيطاني   </h3>
-            <div style={{ minWidth: '300px' }}>
+            <div style={{ minWidth: '280px' }}>
               <p> القصه : {mangaData.categories} </p>
               {mangaData.info.map((e, i) => i <= 1 && <p key={i}>{e}</p>)}
               <p>عدد الفصول: {mangaData.numberOfChapters.at(-1)}</p>
