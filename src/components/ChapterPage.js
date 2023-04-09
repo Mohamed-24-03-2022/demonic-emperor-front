@@ -1,7 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
+import {
+  AiOutlineArrowLeft,
+  AiOutlineArrowRight,
+  AiOutlineArrowUp,
+} from 'react-icons/ai';
 import Chapter from './Chapter';
 
 const ChapterPage = ({ mangaData }) => {
@@ -10,7 +14,6 @@ const ChapterPage = ({ mangaData }) => {
   const location = useLocation();
   const [nextBtn, setNextBtn] = useState(true);
   const [prevBtn, setPrevBtn] = useState(true);
-
 
   const handleChange = (e) => {
     navigate(`/${e.target.value}`);
@@ -41,12 +44,15 @@ const ChapterPage = ({ mangaData }) => {
     isPrevChap();
   }, [location]);
 
-  useEffect(() => {
+  const scrollUp = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }
+  useEffect(() => {
+    scrollUp()
   });
 
   return (
-    <div className="w-full flex flex-col items-center py-10 px-4 space-x-8 text-center">
+    <div className="w-full flex flex-col items-center py-10 px-4 space-x-8 text-center relative">
       <div className="card p-6 w-fit space-y-12 lg:w-3/4 xl:w-7/12 2xl:w-3/6 md:p-10">
         <h1 className="font-bold text-2xl">Chapter {chapterNumber}</h1>
         <div className="select-container ">
@@ -98,6 +104,7 @@ const ChapterPage = ({ mangaData }) => {
           </button>
         </div>
       </div>
+      <button className='lineArrowUp' onClick={() => scrollUp()} > <AiOutlineArrowUp /> </button>
     </div>
   );
 };

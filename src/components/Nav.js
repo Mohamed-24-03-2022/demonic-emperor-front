@@ -1,7 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Darkmode from 'darkmode-js';
+
 
 const Nav = () => {
+  const options = {
+    bottom: '90%',
+    right: 'unset',
+    left: '32px',
+    time: '0.5s',
+    mixColor: '#fff',
+    backgroundColor: '#fff',
+    buttonColorDark: '#100f2c',
+    buttonColorLight: '#eee',
+    saveInCookies: true,
+    label: '🌓',
+    autoMatchOsTheme: true
+  }
+  const darkmode = new Darkmode(options);
+  darkmode.showWidget();
+
   return (
     <>
       <nav className="flex flex-col justify-center items-center space-y-6 text-white">

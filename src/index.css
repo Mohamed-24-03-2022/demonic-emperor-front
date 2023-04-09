@@ -29,12 +29,9 @@ nav {
   background-image: url('./assets/background-img.jpg');
   background-repeat: no-repeat;
   background-position: 50% 10%;
-  /* background-position: top; */
   background-color: transparent;
   background-size: cover;
   height: 500px;
-  /* background-size: 80%; */
-  /* background-size: contain; */
 }
 nav .heading {
   box-shadow: rgba(4, 4, 4, 0.734) 10px 50px 500px 100px;
@@ -106,7 +103,15 @@ nav .heading {
 footer {
   box-shadow: rgba(44, 0, 75, 0.225) 0px 0px 50px 0px;
 }
-
+.lineArrowUp{
+  position: sticky;
+  left: 80%;
+  bottom: 5%;
+}
+.lineArrowUp:hover {
+  box-shadow: rgba(59, 0, 93, 0.3) 0 1px 3px 0, rgba(48, 0, 103, 0.15) 0 4px 8px 3px;
+  background: #f4f2f4c0
+}
 /*__________________________ select box styling _______________________________ */
 div.select-container {
   border: 1px solid #7777776a;
@@ -185,8 +190,8 @@ button:focus {
 }
 
 button:not(:disabled) {
-  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
-    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+  box-shadow: rgba(59, 0, 93, 0.3) 0 1px 3px 0,
+    rgba(48, 0, 103, 0.15) 0 4px 8px 3px;
 }
 
 button:not(:disabled):hover {
@@ -207,4 +212,148 @@ button:not(:disabled):active {
 button:disabled {
   box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
     rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+
+
+
+
+
+
+/* ___________________ dark mode customizing ___________________ */
+.darkmode-layer{
+  box-shadow:inset;
+}
+.darkmode-toggle {
+  z-index: 1;
+  opacity: 0.9;
+}
+.darkmode--activated button.lineArrowUp:hover {
+  box-shadow: rgba(89, 0, 103, 0.542) 0 1px 5px 0, rgba(48, 0, 103, 0.542) 0 4px 5px 6px;
+  background-color: #000000
+}
+.darkmode--activated p,
+.darkmode--activated h3,
+.darkmode--activated a {
+  /* color: #000; */
+  color: #969696;
+}
+.darkmode--activated nav {
+  filter: saturate(130%);
+  box-shadow: rgba(100, 0, 193, 0.751) 1px -55px 50px 1px;
+  /* z-index: -10; */
+}
+.darkmode--activated nav div{
+  background-color: #00000044;
+  box-shadow: rgba(0, 0, 0, 0.366) 0px 0px 40px 500px;
+}
+.darkmode--activated nav h1,
+.darkmode--activated nav p{
+  background-color: #00000000 !important;
+  filter: saturate(200%);
+  filter: contrast(150%);
+}
+.darkmode--activated .menu a {
+  filter: saturate(200%);
+  filter: contrast(150%);
+}
+.darkmode--activated .menu a:Hover {
+  filter: saturate(200%);
+  filter: contrast(150%);
+}
+.darkmode--activated .card img {
+  filter: saturate(120%);
+  box-shadow: rgba(195, 0, 255, 0.058) 0px 0px 40px 5px;
+}
+.darkmode--activated .card {
+  filter: saturate(120%);
+  box-shadow: rgba(195, 0, 255, 0.221) 0px 0px 40px 5px;
+}
+.darkmode--activated html,
+.darkmode--activated html[class],
+.darkmode--activated html[id],
+.darkmode--activated body,
+.darkmode--activated body[class],
+.darkmode--activated body[id],
+.darkmode--activated input {
+  background: #0c0c0c !important;
+}
+.darkmode--activated div:last-child,
+.darkmode--activated :not(span),
+.darkmode--activated :not(a) {
+  border-color: #4af !important;
+  background-color: #0c0c0c;
+}
+.darkmode--activated a,
+.darkmode--activated a[class] {
+  color: #9cf !important;
+}
+.darkmode--activated a:hover {
+  color: #39f !important;
+}
+.darkmode--activated li {
+  color: #8bf !important;
+}
+.darkmode--activated tr {
+  color: #f00 !important;
+}
+.darkmode--activated cite {
+  color: #268 !important;
+}
+.darkmode--activated input {
+  color: #5bf !important;
+}
+.darkmode--activated em {
+  color: #def !important;
+}
+.darkmode--activated ul {
+  color: #f00 !important;
+}
+.darkmode--activated nobr {
+  color: #f00 !important;
+}
+.darkmode--activated div {
+  color: #bdf !important;
+}
+.darkmode--activated strong {
+  color: #9cc !important;
+}
+.darkmode--activated s {
+  color: #f00 !important;
+}
+.darkmode--activated h1 {
+  color: #abc !important;
+}
+.darkmode--activated h2 {
+  color: #def !important;
+}
+.darkmode--activated h3 {
+  color: #cff !important;
+}
+.darkmode--activated * {
+  color: #7cf !important;
+}
+.darkmode--activated b {
+  color: #7af !important;
+}
+.darkmode--activated a,
+.darkmode--activated span,
+.darkmode--activated p,
+.darkmode--activated div,
+.darkmode--activated textarea,
+.darkmode--activated i,
+.darkmode--activated td {
+  color: #ace !important;
+  text-shadow: -1px -1px #0c0c0c, 1px -1px #0c0c0c, -1px 1px #0c0c0c,
+    1px 1px #0c0c0c !important;
+}
+.darkmode--activated a > span.Sprite16 {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+.darkmode--activated button:hover {
+  box-shadow: rgba(63, 0, 95, 0.562) 0px 1px 30px 3px;
+}
+.darkmode--activated button {
+  border: 2px solid #52007e6c;
 }

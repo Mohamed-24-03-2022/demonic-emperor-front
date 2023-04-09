@@ -15,7 +15,6 @@ const App = () => {
   const callAPI = async () => {
     try {
       const res = await fetch('http://localhost:9000/testAPI');
-      console.log(res);
       const data = await res.json();
       return data;
     } catch (err) {
