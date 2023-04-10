@@ -8,6 +8,8 @@ import {
 } from 'react-icons/ai';
 import Chapter from './Chapter';
 
+
+
 const ChapterPage = ({ mangaData }) => {
   const { chapterNumber } = useParams();
   const navigate = useNavigate();
@@ -45,7 +47,7 @@ const ChapterPage = ({ mangaData }) => {
   }, [location]);
 
   const scrollUp = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 500, left: 0, behavior: 'smooth' });
   }
   useEffect(() => {
     scrollUp()

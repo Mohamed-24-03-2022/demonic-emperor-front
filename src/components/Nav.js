@@ -1,24 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Darkmode from 'darkmode-js';
+
 
 
 const Nav = () => {
-  const options = {
-    bottom: '90%',
-    right: 'unset',
-    left: '32px',
-    time: '0.5s',
-    mixColor: '#fff',
-    backgroundColor: '#fff',
-    buttonColorDark: '#100f2c',
-    buttonColorLight: '#eee',
-    saveInCookies: true,
-    label: '🌓',
-    autoMatchOsTheme: true
-  }
-  const darkmode = new Darkmode(options);
-  darkmode.showWidget();
 
   return (
     <>
@@ -30,14 +15,8 @@ const Nav = () => {
       </nav>
       <div className="menu p-2 bg-opacity-30 bg-white text-center">
         <ul className="flex flex-row justify-center items-center h-14 font-bold md:text-lg">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/0/">Read First Chapter </Link>
-          </li>
-          <li>
-            <Link to="/privacy/"> Privacy Policy</Link>
+          <li >
+            <Link to="/" className='px-12' style={{ backgroundColor: '#00000000' }}>Home</Link>
           </li>
         </ul>
       </div>
