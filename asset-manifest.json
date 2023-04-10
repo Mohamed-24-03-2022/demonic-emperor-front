@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/demonic-emperor-front/static/css/main.51936bfd.css",
-    "main.js": "/demonic-emperor-front/static/js/main.21837c51.js",
+    "main.css": "/demonic-emperor-front/static/css/main.d27adacb.css",
+    "main.js": "/demonic-emperor-front/static/js/main.b4e75f28.js",
     "static/media/background-img.jpg": "/demonic-emperor-front/static/media/background-img.7d176149772a7b5f7529.jpg",
     "static/media/manga-img.jpg": "/demonic-emperor-front/static/media/manga-img.3ddcf4624af85c0b09fa.jpg",
-    "static/media/loading.png": "/demonic-emperor-front/static/media/loading.87297c84473597344a71.png",
+    "static/media/loading.svg": "/demonic-emperor-front/static/media/loading.e8337716cc65e02f6e70b64777e605f6.svg",
     "index.html": "/demonic-emperor-front/index.html",
-    "main.51936bfd.css.map": "/demonic-emperor-front/static/css/main.51936bfd.css.map",
-    "main.21837c51.js.map": "/demonic-emperor-front/static/js/main.21837c51.js.map"
+    "main.d27adacb.css.map": "/demonic-emperor-front/static/css/main.d27adacb.css.map",
+    "main.b4e75f28.js.map": "/demonic-emperor-front/static/js/main.b4e75f28.js.map"
   },
   "entrypoints": [
-    "static/css/main.51936bfd.css",
-    "static/js/main.21837c51.js"
+    "static/css/main.d27adacb.css",
+    "static/js/main.b4e75f28.js"
   ]
 }
