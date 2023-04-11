@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
@@ -6,36 +7,21 @@ import ChapterPage from './components/ChapterPage';
 import Footer from './components/Footer';
 import NotFoundRoute from './components/NotFoundRoute';
 import Loading from './Loading';
-import Dmca from './components/Dmca'
+import Dmca from './components/Dmca';
 import Privacy from './components/Privacy';
-import Darkmode from 'darkmode-js';
-
-
 import DisableDevtool from 'disable-devtool';
 
-const starter = () => {
-  const options = {
-    bottom: '90%',
-    right: 'unset',
-    left: '32px',
-    time: '0s',
-    mixColor: '#00000000',
-    backgroundColor: '#00000000',
-    buttonColorDark: '#100f2c',
-    buttonColorLight: '#fff',
-    saveInCookies: true,
-    label: '🌓',
-    autoMatchOsTheme: true
-  }
-  const darkmode = new Darkmode(options);
-  darkmode.showWidget();
-
-  //! DisableDevtool();
-}
+const isDarkmode = () => {
+  let darkmode = JSON.parse(localStorage.getItem('darkmode'));
+  if (darkmode === null || darkmode === undefined) darkmode = false;
+  return darkmode;
+};
 
 const App = () => {
-  starter();
   const [mangaData, setMangaData] = useState(null);
+  const [darkmode, setDarkmode] = useState(isDarkmode());
+
+  //! DisableDevtool();
 
   const callAPI = async () => {
     try {
@@ -53,30 +39,42 @@ const App = () => {
     });
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem('darkmode', darkmode);
+  }, [darkmode]);
+
+  const toggleDarkmode = () => {
+    setDarkmode(!darkmode);
+  };
+
   return (
     <BrowserRouter>
-      <Nav />
-      <Routes>
-        {mangaData ? (
-          <>
-            <Route path="/" element={<MainPage mangaData={mangaData} />} />
-            <Route
-              path="/:chapterNumber"
-              element={<ChapterPage mangaData={mangaData} />}
-            />
-          </>
-        ) : (
-          <>
-            <Route path="/" element={<Loading />} />
-            <Route path="/:chapterNumber" element={<Loading />} />
-          </>
-        )}
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/dmca" element={<Dmca />} />
-        <Route path="/not-found-404" element={<NotFoundRoute />} />
-      </Routes>
-
-      <Footer />
+      <div className={darkmode ? 'darkmode--activated' : 'nothing'}>
+        <button onClick={toggleDarkmode} className="darkmode-toggle">
+          🌓
+        </button>
+        <Nav />
+        <Routes>
+          {mangaData ? (
+            <>
+              <Route path="/" element={<MainPage mangaData={mangaData} />} />
+              <Route
+                path="/:chapterNumber"
+                element={<ChapterPage mangaData={mangaData} />}
+              />
+            </>
+          ) : (
+            <>
+              <Route path="/" element={<Loading />} />
+              <Route path="/:chapterNumber" element={<Loading />} />
+            </>
+          )}
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/dmca" element={<Dmca />} />
+          <Route path="/not-found-404" element={<NotFoundRoute />} />
+        </Routes>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 };

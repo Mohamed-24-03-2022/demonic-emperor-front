@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import mangaImg from '../assets/manga-img.jpg';
+import Pagination from './Pagination';
 
 const MainPage = ({ mangaData }) => {
+  const [totalChapters] = useState(
+    mangaData.numberOfChapters.length
+  );
+  const [chaptersPerPage] = useState(50);
+  const [currentPage, setCurrentPage] = useState(1);
+  const numberOfPages = Math.ceil(totalChapters / chaptersPerPage);
+
+  // get current chapters on page
+  const indexOfLastChapter = currentPage * chaptersPerPage;
+  const indexOfFirstChapter = indexOfLastChapter - chaptersPerPage;
+  const currentChapters = [...mangaData.numberOfChapters].reverse().slice(
+    indexOfFirstChapter,
+    indexOfLastChapter
+  );
+
+  // change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <div className="w-full flex flex-col items-center py-10 px-10 space-x-8 text-right">
       <div className="card p-6 w-fit space-y-10 sm:p-10 lg:w-3/4 xl:w-7/12 2xl:w-3/6 md:p-10">
@@ -32,10 +51,10 @@ const MainPage = ({ mangaData }) => {
 
         <div className="chapters-section flex flex-col items-end ">
           <p className="font-bold text-4xl pb-2"> : الفصول</p>
-          <div className="scrollable flex flex-col items-end space-y-2 font-bold">
-            {[...mangaData.numberOfChapters].reverse().map((chapNum, i) => (
+          <div className=" scrollable flex flex-col items-end space-y-2 font-bold">
+            {currentChapters.map((chapNum, i) => (
               <Link key={i} to={`/${chapNum}/`}>
-                {i === 0 ? (
+                {chapNum === mangaData.numberOfChapters.at(-1) ? (
                   <p className="newP blink_me inline-block px-2 font-bold">
                     جديد
                   </p>
@@ -46,7 +65,12 @@ const MainPage = ({ mangaData }) => {
               </Link>
             ))}
           </div>
+          <div className="pagination mt-4">
+            <Pagination numberOfPages={numberOfPages} paginate={paginate} />
+          </div>
         </div>
+
+
       </div>
     </div>
   );

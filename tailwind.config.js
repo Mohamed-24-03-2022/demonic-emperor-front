@@ -17,6 +17,7 @@ module.exports = {
       green: '#13ce66',
       yellow: '#ffc82c',
       white: '#fff',
+      black: '#000'
     },
     fontFamily: {
       sans: ['Roboto', 'sans-serif'],
