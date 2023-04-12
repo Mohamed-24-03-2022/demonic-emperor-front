@@ -3,7 +3,7 @@ import React from 'react';
 const Privacy = () => {
   return (
     <div className="w-full flex flex-col items-center py-10 px-4 text-left">
-      <div className="card p-6 w-fit space-y-0 lg:w-3/4 xl:w-7/12 2xl:w-3/6 md:p-10">
+      <div className="card p-6 w-full space-y-0 lg:w-3/4 xl:w-7/12 2xl:w-3/6 md:p-10">
         <h1 className='font-bold text-lg m-0 py-4'>Privacy Policy for Demonic Emperor</h1>
 
         <p>

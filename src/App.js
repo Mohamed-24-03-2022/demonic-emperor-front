@@ -9,6 +9,7 @@ import NotFoundRoute from './components/NotFoundRoute';
 import Loading from './Loading';
 import Dmca from './components/Dmca';
 import Privacy from './components/Privacy';
+import ContactUs from './components/ContactUS'
 import DisableDevtool from 'disable-devtool';
 
 const isDarkmode = () => {
@@ -71,6 +72,7 @@ const App = () => {
           )}
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/dmca" element={<Dmca />} />
+          <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/not-found-404" element={<NotFoundRoute />} />
         </Routes>
         <Footer />

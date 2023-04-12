@@ -24,7 +24,7 @@ const MainPage = ({ mangaData }) => {
 
   return (
     <div className="w-full flex flex-col items-center py-10 px-10 space-x-8 text-right">
-      <div className="card p-6 w-fit space-y-10 sm:p-10 lg:w-3/4 xl:w-7/12 2xl:w-3/6 md:p-10">
+      <div className="card p-6 w-full space-y-10 sm:p-10 lg:w-3/4 xl:w-7/12 2xl:w-3/6 md:p-10">
         <div className="manga-description flex flex-row flex-wrap space-x-8 space-y-8 md:flex-nowrap md:space-y-0 md:items-center md:text-lg">
           <div className="manga-img-container mx-auto w-2/4">
             <img src={mangaImg} style={{ minWidth: '250px' }} alt="manga-img" />

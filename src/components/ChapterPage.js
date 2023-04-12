@@ -55,7 +55,7 @@ const ChapterPage = ({ mangaData }) => {
 
   return (
     <div className="w-full flex flex-col items-center py-10 px-4 space-x-8 text-center relative">
-      <div className="card p-6 w-fit space-y-12 lg:w-3/4 xl:w-7/12 2xl:w-3/6 md:p-10">
+      <div className="card p-6 w-full space-y-12 lg:w-3/4 xl:w-7/12 2xl:w-3/6 md:p-10">
         <h1 className="font-bold text-2xl">Chapter {chapterNumber}</h1>
         <div className="select-container ">
           <select
