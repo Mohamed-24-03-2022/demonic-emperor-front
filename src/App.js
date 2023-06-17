@@ -22,11 +22,11 @@ const App = () => {
   const [mangaData, setMangaData] = useState(null);
   const [darkmode, setDarkmode] = useState(isDarkmode());
 
-  //! DisableDevtool();
+  DisableDevtool();
 
   const callAPI = async () => {
     try {
-      const res = await fetch('http://localhost:9000/demonic-emperor');
+      const res = await fetch('https://server.demonicemperors.online/demonic-emperor');
       const data = await res.json();
       return data;
     } catch (err) {
