@@ -6,6 +6,7 @@ This is a web application for reading the Demonic Emperor manga. It provides a u
 
 - Browse and read the Demonic Emperor manga.
 - Toggle between light and dark modes.
+- Fully friendly mobile
 - Privacy policy page.
 - DMCA page.
 - Contact us page.
