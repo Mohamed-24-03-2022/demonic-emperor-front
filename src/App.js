@@ -26,7 +26,7 @@ const App = () => {
 
   const callAPI = async () => {
     try {
-      const res = await fetch('https://server.demonicemperors.online/demonic-emperor');
+      const res = await fetch('https://demonic-emperor-server.fly.dev/demonic-emperor');
       const data = await res.json();
       return data;
     } catch (err) {
