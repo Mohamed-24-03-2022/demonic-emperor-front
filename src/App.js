@@ -22,7 +22,7 @@ const App = () => {
   const [mangaData, setMangaData] = useState(null);
   const [darkmode, setDarkmode] = useState(isDarkmode());
 
-  DisableDevtool();
+  // DisableDevtool();
 
   const callAPI = async () => {
     try {
