@@ -10,7 +10,7 @@ import Loading from './Loading';
 import Dmca from './components/Dmca';
 import Privacy from './components/Privacy';
 import ContactUs from './components/ContactUS'
-import DisableDevtool from 'disable-devtool';
+// import DisableDevtool from 'disable-devtool';
 
 const isDarkmode = () => {
   let darkmode = JSON.parse(localStorage.getItem('darkmode'));
@@ -22,6 +22,7 @@ const App = () => {
   const [mangaData, setMangaData] = useState(null);
   const [darkmode, setDarkmode] = useState(isDarkmode());
 
+  // <script src="https://www.unpkg.com/disabel-console@1.0.0/index.js"></script>
   // DisableDevtool();
 
   const callAPI = async () => {
